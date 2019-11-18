@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>学生档案</title>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+    <div class="main">
+        <div class="add-title">学生档案</div>
+        <form class="add-form" action="/add" method="post">
+            <div class="form-item">
+                <label for="inputName" class="control-label">姓名</label>
+                <input name="name" type="text" class="input-text form-control" id="inputName" placeholder="请输入姓名">
+            </div>
+            <div class="form-item">
+                <label for="inputAge" class="control-label">年龄</label>
+                <input name="age" type="number" class="input-text form-control" id="inputAge" placeholder="请输入年龄">
+            </div>
+            <div class="form-item">
+                <label for="inputGender" class="control-label label-choice">性别</label>
+                <label class="radio-inline choice-inline">
+                    <input type="radio" id="inputGender1" value="0" name="gender"> 男
+                </label>
+                <label class="radio-inline choice-inline">
+                    <input type="radio" id="inputGender2" value="1" name="gender"> 女
+                </label>
+            </div>
+            <div class="form-item">
+                <label for="inputEmail" class="control-label">邮箱</label>
+                <input name="email" type="email" class="input-text form-control" id="inputEmail" placeholder="请输入邮箱">
+            </div>
+            <div class="form-item">
+                <label for="inputHobbies" class="control-label label-choice">爱好</label>
+                <label class="checkbox-inline choice-inline">
+                    <input type="checkbox" id="inputHobbies1" value="吃饭" name="hobbies"> 吃饭
+                </label>
+                <label class="checkbox-inline choice-inline">
+                    <input type="checkbox" id="inputHobbies2" value="睡觉" name="hobbies"> 睡觉
+                </label>
+                <label class="checkbox-inline choice-inline">
+                    <input type="checkbox" id="inputHobbies3" value="打豆豆" name="hobbies"> 打豆豆
+                </label>
+            </div>
+            <div class="form-item">
+                <label for="inputCollege" class="control-label">所属学院</label>
+                <input name="collage" type="text" class="input-text form-control" id="inputCollege" placeholder="请输入所属学院">
+            </div>
+            <div class="form-item">
+                <label for="inputDate" class="control-label">入学日期</label>
+                <input name="enterDate" type="date" class="input-text form-control" id="inputDate" placeholder="年/月/日">
+            </div>
+            <div class="form-item">
+                <button type="submit" class="submin-button">提交</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>学员信息</title>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+    <div class="tabel-main">
+        <h4 class="list-title">学员信息</h4>
+        <table>
+            <tr>
+                <td>姓名</td>
+                <td>年龄</td>
+                <td>性别</td>
+                <td>邮箱</td>
+                <td>爱好</td>
+                <td>所属学院</td>
+                <td>入学时间</td>
+            </tr>
+            {{each students}}
+                <tr>
+                    <td>{{$value.name}}</td>
+                    <td>{{$value.age}}</td>
+                    <td>{{$value.gender == '0' ? '男' : '女'}}</td>
+                    <td>{{$value.email}}</td>
+                    <td>
+                        {{each $value.hobbies}}
+                            <span>{{$value}}</span>
+                        {{/each}}
+                    </td>
+                    <td>{{$value.collage}}</td>
+                    <td>{{dateformat($value.enterDate, 'yyyy-mm-dd')}}</td>
+                </tr>
+            {{/each}}
+        </table>
+    </div>
+</body>
+
+</html>
